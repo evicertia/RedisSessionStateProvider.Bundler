@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Microsoft.Web.RedisSessionStateProvider-Bundled</id>
+        <version>0.0.0.0</version>
+        <title>RedisSessionStateProvider (Bundled)</title>
+        <authors>RedisSessionStateProvider by Microsoft, Bundled by evicertia.</authors>
+        <owners>Microsoft</owners>
+        <licenseUrl>http://www.microsoft.com/web/webpi/eula/aspnetcomponent_rtw_enu.htm</licenseUrl>
+        <projectUrl>https://github.com/evicertia/RedisSessionStateProvider.Bundler</projectUrl>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <description>Custom session state provider for redis cache.</description>
+        <copyright>Microsoft © 2014</copyright>
+        <tags>session sessionstateprovider azure microsoft windowsazureofficial redis</tags>
+        <frameworkAssemblies>
+            <frameworkAssembly assemblyName="System" targetFramework=".NETFramework4.0" />
+            <frameworkAssembly assemblyName="System.Configuration" targetFramework=".NETFramework4.0" />
+            <frameworkAssembly assemblyName="System.Web" targetFramework=".NETFramework4.0" />
+            <frameworkAssembly assemblyName="Microsoft.CSharp" targetFramework=".NETFramework4.0" />
+        </frameworkAssemblies>
+    </metadata>
+</package>
