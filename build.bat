@@ -6,6 +6,7 @@ SET SED=Tools\UnixUtils\sed.exe
 REM Fetching packages..	
 
 IF [%BUILD_NUMBER%] == [] (SET BUILD_NUMBER=0)
+IF [%APPVEYOR_BUILD_NUMBER%] NEQ [] (SET BUILD_NUMBER=%APPVEYOR_BUILD_NUMBER%)
 
 Tools\NuGet.exe install -OutputDirectory packages ILRepack
 Tools\NuGet.exe install -OutputDirectory packages Microsoft.Web.RedisSessionStateProvider
