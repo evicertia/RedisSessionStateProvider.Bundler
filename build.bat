@@ -20,6 +20,7 @@ REM Bundling EasyNetQ dependencies..
 IF NOT EXIST Bundle MKDIR Bundle
 IF NOT EXIST Bundle\lib MKDIR Bundle\lib
 IF NOT EXIST Bundle\lib\net40 MKDIR Bundle\lib\net40
+IF NOT EXIST Bundle\lib\net40 MKDIR Bundle\lib\net45
 IF NOT EXIST Bundle\content MKDIR Bundle\content
 
 xcopy packages\%REDISPROVDIR%\content Bundle\content /s /e /y
@@ -27,6 +28,10 @@ xcopy packages\%REDISPROVDIR%\content Bundle\content /s /e /y
 packages\%ILREPACKDIR%\tools\ILRepack.exe /internalize /out:Bundle\lib\net40\Microsoft.Web.RedisSessionStateProvider.dll ^
   packages\%REDISPROVDIR%\lib\net40\Microsoft.Web.RedisSessionStateProvider.dll ^
   packages\%SEREDISDIR%\lib\net40\StackExchange.Redis.StrongName.dll
+
+packages\%ILREPACKDIR%\tools\ILRepack.exe /internalize /out:Bundle\lib\net45\Microsoft.Web.RedisSessionStateProvider.dll ^
+  packages\%REDISPROVDIR%\lib\net40\Microsoft.Web.RedisSessionStateProvider.dll ^
+  packages\%SEREDISDIR%\lib\net45\StackExchange.Redis.StrongName.dll
 
 REM Creating nuget package..
 
